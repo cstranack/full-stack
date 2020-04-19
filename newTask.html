@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
+    
+
+    <!-- Style sheet -->
+    <title>inTime - newTask</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    
+</head>
+
+<body>
+    <h3>Add Task</h3>
+<br>
+    <!-- container for the new task form -->
+    <div class="container" id="taskContainer">
+        <!-- new task form is displayed on a card -->
+        <div class="card" id="newTaskCard">
+            <form>
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="taskName" id="formLabel">Task Name</label>
+                        <input  class="u-full-width" type="text" placeholder="Email Karen" id="taskName">
+                    </div>
+                </div>
+                <br>
+                
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="moreDetailsArea" id="formLabel">More Details</label>
+                        <textarea class="u-full-width" placeholder="Email Karen about..." id="moreDetailsArea"></textarea>
+                    </div>
+                </div>
+                <br>
+                <label for="taskOrEvent" id="formLabel">Task or Event?</label>
+                 <div class="row">
+                    <div class="two columns">
+                        <label for="task" id="tOrELabel">task</label>
+                    </div>
+                    <div class="one column">
+                        <input class="u-full-width" type="radio" id="task" name="taskOrEvent" value="task">
+                    </div>
+                 </div>
+                    
+                <div class="row">
+                    <div class="two columns">
+                        <label for="event" id="tOrELabel">event</label>
+                    </div>
+                    <div class="one column">
+                        <input  class="u-full-width" type="radio" id="event" name="taskOrEvent" value="event">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="deadline" id="formLabel">Event date or Task deadline</label>
+                        <input class="u-full-width" type="datetime-local" placeholder="  dd/mm/yy  00:00 " id="deadline" name="deadline">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="" id="durationLabel">Estimated Duration</label>
+                        
+                    </div>
+                </div>
+                <br>
+                <input href="overview.html" class="button" type="submit" value="Submit" id="loginButton">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

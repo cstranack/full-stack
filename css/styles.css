@@ -1,0 +1,244 @@
+/* STYLES SHEET */
+
+
+/* BODY */
+body {
+    background-color: #E4E4E4;
+}
+
+
+/* HEADINGS */
+
+h3{
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+/* LOGIN/SIGNUP FORM */
+
+#formContainer{
+    /* centralising button */
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 50px;
+}
+
+.loginLink{
+    text-decoration: underline;
+    font-family: 'Kalam', cursive;
+    color: #707070 ;
+    font-size: 20px;
+}
+
+
+
+#passwordInput{
+    /* rounding corners and font */
+    border-radius: 40px;
+    font-family: 'Kalam', cursive;
+}
+
+#emailInput{
+    /* rounding corners and font */
+    border-radius: 40px;
+    font-family: 'Kalam', cursive;
+}
+
+/* BUTTONS */
+
+#loginButton{
+    background-color: #B9C0DA;
+    border-radius: 50px;
+    font-family: 'Kalam', cursive;
+    font-size: 15px;
+    border: 1px solid #707070; /* grey */
+    box-shadow: 0 5px 5px 0 #979797; /* left, bottom, right, top*/
+    float: right;
+}
+
+#loginButton:hover {
+    /* shadow for pushed effect */
+    box-shadow: 0 0 0 0;
+  }
+
+
+  /* ----OVERVIEW PAGE--- */
+
+  #toDoCard{
+    /* Todo list card for curret tasks */
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 30px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  }
+
+  #monthCard{
+    /* monthly view*/
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 30px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+
+/* MONTH TABLE */
+
+table{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+/* NEW TASK PAGE */
+
+#newTaskCard{
+    background-color: white;
+    /* only top two corners are rounded */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* card paddings and margins */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30%;
+    padding-right: 30%;
+    /* shadow around the card for some depth */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+#taskContainer{
+    /* text-align: left; */
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
+#taskName{
+    /* rounding corners and font */
+    border-radius: 40px;
+    font-family:'Quicksand', sans-serif;
+}
+
+
+#moreDetailsArea{
+    /* rounding corners and font */
+    border-radius: 15px;
+    font-family:'Quicksand', sans-serif;
+}
+
+#deadline{
+    /* rounding corners and font */
+    border-radius: 15px;
+    font-family:'Quicksand', sans-serif;
+}
+
+/* form label styles */
+#formLabel{
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    
+}
+
+/* task or event label styles */
+#tOrELabel{
+    font-family:'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+   
+
+
+
+
+
+
+
+/* CALENDER */
+
+/* {box-sizing: border-box;} */
+ul {list-style-type: none;}
+/* body {font-family: Verdana, sans-serif;} */
+
+.month {
+/* aligns month title to centre */
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+    /* Month font styling */
+    font-family:'Quicksand', sans-serif;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #B9C0DA;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
