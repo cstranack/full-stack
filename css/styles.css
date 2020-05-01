@@ -1,9 +1,8 @@
 /* STYLES SHEET */
 
-
 /* BODY */
 body {
-    background-color: #E4E4E4;
+    background-color: #E4E4E4; 
 }
 
 
@@ -12,16 +11,223 @@ body {
 h3{
     font-family: 'Kalam', cursive;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
+    color: #777777;
 }
 
 
-/* LOGIN/SIGNUP FORM */
+h4{
+  font-family: 'Kalam', cursive;
+  text-align: left;
+}
+
+
+.toDoTitle{
+  font-family:'Quicksand', sans-serif;
+  font-size: 18px;
+}
+
+/* -------------------- */
+
+/*----- NAVIGATION----- */
+/* This code relates to the side navigatin bar */
+/* first some styles are added to the overall html */
+.bodyNav, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: #E4E4E4; */
+  font-family:'Quicksand', sans-serif;
+
+}
+
+
+/* LINK STYLES */
+/* unvisited link */
+a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* mouse over link */
+a:hover {
+  /* make it clear its a link */
+  /* text-decoration: underline; */
+  text-underline-position: below;
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
+  color:#636466;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  background-color: #97A0A5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  z-index: 1;
+}
+
+section {
+  /* position relative prevents a side scroll */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: #fff; */
+  overflow-x: hidden;
+}
+
+#menuLabels {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 3;
+  position: fixed;
+}
+
+/* burgerMenu */
+.bar {
+  display: block;
+  background-color: #97A0A5;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto;
+  transition: background-color .5s ease-in, transform .5s ease-in, width .5s ease-in;
+}
+
+
+.content {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: #E4E4E4;
+  z-index: 2;
+  transition: transform .5s ease-in-out;
+}
+
+
+.asideList {
+  /* Styles for the list */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.asideAnchor {
+  /* Styles for the links */
+  padding: 15px 0;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color .3s .15s ease-in;
+  font-family:'Quicksand', sans-serif;
+}
+
+.asideAnchor::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #ffffff;
+  width: 0;
+  transition: width .3s ease-in;
+  z-index: -1;
+}
+
+.asideAnchor:hover {
+  color: #97a0a9;
+}
+
+.asideAnchor:hover::after {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .content {
+  transform: translateX(20%);
+}
+
+input[type="checkbox"]:checked ~ label .bar {
+  /* burger menu colour after it transforms into a cross */
+  background-color: #fff;
+}
+
+/* this section transforms the burger menu into a cross when the 
+menu is opened */
+/* this is tge top bar */
+/* each line ensures the code works across all browsers */
+input[type="checkbox"]:checked ~ label .top {
+  -webkit-transform: translateY(0px) rotateZ(45deg);
+  -moz-transform: translateY(0px) rotateZ(45deg);
+  -ms-transform: translateY(0px) rotateZ(45deg);
+  -o-transform: translateY(0px) rotateZ(45deg);
+  transform: translateY(0px) rotateZ(45deg);
+}
+/* this is the bottom bar */
+input[type="checkbox"]:checked ~ label .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+input[type="checkbox"]:checked ~ label .middle {
+  width: 0;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+.ua {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #777777;
+  font-size: 2em;
+  z-index: 2;
+}
+
+
+
+
+
+/* ---LOGIN/SIGNUP FORM------- */
 
 #formContainer{
     /* centralising button */
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
     margin-top: 50px;
 }
 
@@ -29,7 +235,7 @@ h3{
     text-decoration: underline;
     font-family: 'Kalam', cursive;
     color: #707070 ;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -37,13 +243,19 @@ h3{
 #passwordInput{
     /* rounding corners and font */
     border-radius: 40px;
-    font-family: 'Kalam', cursive;
+    font-family:'Quicksand', sans-serif;
+}
+
+#confirmPasswordInput{
+  /* rounding corners and font */
+  border-radius: 40px;
+  font-family:'Quicksand', sans-serif;
 }
 
 #emailInput{
     /* rounding corners and font */
     border-radius: 40px;
-    font-family: 'Kalam', cursive;
+    font-family:'Quicksand', sans-serif;
 }
 
 /* BUTTONS */
@@ -53,9 +265,8 @@ h3{
     border-radius: 50px;
     font-family: 'Kalam', cursive;
     font-size: 15px;
-    /* border: 1px solid #707070; grey */
-    box-shadow: 0 5px 5px 0 #979797; /* left, bottom, right, top*/
-    /* float: right; */
+    box-shadow: 1px 10px 15px 0 #afafaf; 
+
 }
 
 #loginButton:hover {
@@ -68,17 +279,17 @@ h3{
 
 
 
-
-
-
   /* ----OVERVIEW PAGE--- */
+
 
   #toDoCard{
     /* Todo list card for curret tasks */
     background-color: white;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     margin-left: 30px;
     padding-top: 20px;
+    padding-bottom: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
   }
@@ -86,11 +297,13 @@ h3{
   #monthCard{
     /* monthly view*/
     background-color: white;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     margin-right: 30px;
     padding-top: 20px;
+    padding-bottom: 255px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+    /* position: absolute; */
 }
 
 
@@ -107,7 +320,7 @@ ul {list-style-type: none;}
 
 .month ul {
   margin: 0;
-  padding: 0;
+  padding: 50px;
 }
 
 .month ul li {
@@ -164,10 +377,8 @@ ul {list-style-type: none;}
 
 
 .days li:hover{
-    padding: 5px;
     background:#A9D2D5;
     color: white 
-
 }
 
 
@@ -214,7 +425,7 @@ ul {list-style-type: none;}
 #taskContainer{
     /* text-align: left; */
     padding-top: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #taskName{
@@ -250,6 +461,10 @@ ul {list-style-type: none;}
     font-weight: normal;
 }
 
+#durationLabel{
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+}
 
 #submitButton{
     background-color: #B9C0DA;
@@ -257,7 +472,7 @@ ul {list-style-type: none;}
     font-family: 'Kalam', cursive;
     font-size: 15px;
     /* border: 1px solid #707070; grey */
-    box-shadow: 0 5px 5px 0 #979797; /* left, bottom, right, top*/
+    box-shadow: 10px 10px 25px 0 #afafaf; /* left, bottom, right, top*/
     float: right;
 }
 
@@ -269,9 +484,452 @@ ul {list-style-type: none;}
 
    
 
+  /* ---MENU PAGE---- */
+  .menuButtons{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-left: 20%;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    
+  }
+
+  #addButton{
+    background-color: #B9C0DA;
+    box-shadow: 10px 10px 25px 0 #afafaf; /* xAxis, yAxiz, blur, size*/
+  }
+
+  #menuButton{
+    background-color: #A9D2D5;
+    box-shadow: 10px 10px 25px 0 #afafaf; /* xAxis, yAxiz, blur, size*/
+  }
+
+  #settingsButton{
+    background-color: #979797;
+    box-shadow: 10px 10px 25px 0 #afafaf; /* xAxis, yAxiz, blur, size*/
+  }
+
+
+  #addButton:hover{
+    background-color: #B9C0DA;
+    color: white;
+    box-shadow: 0 0 0 0;
+  }
+
+  #menuButton:hover{
+    background-color: #A9D2D5;
+    color: white;
+    box-shadow: 0 0 0 0;
+  }
+
+  #settingsButton:hover{
+    background-color: #979797;
+    color: white;
+    box-shadow: 0 0 0 0;
+  }
+
+
+  #menuContainer{
+    margin-top: 15%;
+    padding-left: auto;
+  }
 
 
 
 
+  /* CALENDER EXPERIMENT */
 
 
+  /* *, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    
+    body {
+     overflow: hidden;
+     font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-weight: 100;
+     color: rgba(255, 255, 255, 1);
+     margin: 0;
+     padding: 0;
+     background: #4A4A4A;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+    }
+    
+    #calendar {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      width: 420px;
+      margin: 0 auto;
+      height: 570px;
+      overflow: hidden;
+    }
+    
+    .header {
+      height: 50px;
+      width: 420px;
+      background: rgba(66, 66, 66, 1);
+      text-align: center;
+      position:relative;
+      z-index: 100;
+    }
+    
+    .header h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      line-height: 50px;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
+    
+    .left, .right {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      top: 50%;
+      margin-top: -7.5px;
+      cursor: pointer;
+    }
+    
+    .left {
+      border-width: 7.5px 10px 7.5px 0;
+      border-color: transparent rgba(160, 159, 160, 1) transparent transparent;
+      left: 20px;
+    }
+    
+    .right {
+      border-width: 7.5px 0 7.5px 10px;
+      border-color: transparent transparent transparent rgba(160, 159, 160, 1);
+      right: 20px;
+    }
+    
+    .month {
+      /*overflow: hidden;
+      opacity: 0;
+    }
+    
+    .month.new {
+      -webkit-animation: fadeIn 1s ease-out;
+      opacity: 1;
+    }
+    
+    .month.in.next {
+      -webkit-animation: moveFromTopFadeMonth .4s ease-out;
+      -moz-animation: moveFromTopFadeMonth .4s ease-out;
+      animation: moveFromTopFadeMonth .4s ease-out;
+      opacity: 1;
+    }
+    
+    .month.out.next {
+      -webkit-animation: moveToTopFadeMonth .4s ease-in;
+      -moz-animation: moveToTopFadeMonth .4s ease-in;
+      animation: moveToTopFadeMonth .4s ease-in;
+      opacity: 1;
+    }
+    
+    .month.in.prev {
+      -webkit-animation: moveFromBottomFadeMonth .4s ease-out;
+      -moz-animation: moveFromBottomFadeMonth .4s ease-out;
+      animation: moveFromBottomFadeMonth .4s ease-out;
+      opacity: 1;
+    }
+    
+    .month.out.prev {
+      -webkit-animation: moveToBottomFadeMonth .4s ease-in;
+      -moz-animation: moveToBottomFadeMonth .4s ease-in;
+      animation: moveToBottomFadeMonth .4s ease-in;
+      opacity: 1;
+    }
+    
+    .week {
+     background: #4A4A4A;
+    }
+    
+    .day {
+      display: inline-block;
+      width: 60px;
+      padding: 10px;
+      text-align: center;
+      vertical-align: top;
+      cursor: pointer;
+      background: #4A4A4A;
+      position: relative;
+      z-index: 100;
+    }
+    
+    .day.other {
+     color: rgba(255, 255, 255, .3);
+    }
+    
+    .day.today {
+      color: rgba(156, 202, 235, 1);
+    }
+    
+    .day-name {
+      font-size: 9px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, .5);
+      letter-spacing: .7px;
+    }
+    
+    .day-number {
+      font-size: 24px;
+      letter-spacing: 1.5px;
+    }
+    
+    
+    .day .day-events {
+      list-style: none;
+      margin-top: 3px;
+      text-align: center;
+      height: 12px;
+      line-height: 6px;
+      overflow: hidden;
+    }
+    
+    .day .day-events span {
+      vertical-align: top;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      width: 5px;
+      height: 5px;
+      line-height: 5px;
+      margin: 0 1px;
+    }
+    
+    .blue { background: rgba(156, 202, 235, 1); }
+    .orange { background: rgba(247, 167, 0, 1); }
+    .green { background: rgba(153, 198, 109, 1); }
+    .yellow { background: rgba(249, 233, 0, 1); }
+    
+    .details {
+      position: relative;
+      width: 420px;
+      height: 75px;
+      background: rgba(164, 164, 164, 1);
+      margin-top: 5px;
+      border-radius: 4px;
+    }
+    
+    .details.in {
+      -webkit-animation: moveFromTopFade .5s ease both;
+      -moz-animation: moveFromTopFade .5s ease both;
+      animation: moveFromTopFade .5s ease both;
+    }
+    
+    .details.out {
+      -webkit-animation: moveToTopFade .5s ease both;
+      -moz-animation: moveToTopFade .5s ease both;
+      animation: moveToTopFade .5s ease both;
+    }
+    
+    .arrow {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      margin-left: -2px;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
+      transition: all 0.7s ease;
+    }
+    
+    .events {
+      height: 75px;
+      padding: 7px 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .events.in {
+      -webkit-animation: fadeIn .3s ease both;
+      -moz-animation: fadeIn .3s ease both;
+      animation: fadeIn .3s ease both;
+    }
+    
+    .events.in {
+      -webkit-animation-delay: .3s;
+      -moz-animation-delay: .3s;
+      animation-delay: .3s;
+    }
+    
+    .details.out .events {
+      -webkit-animation: fadeOutShrink .4s ease both;
+      -moz-animation: fadeOutShink .4s ease both;
+      animation: fadeOutShink .4s ease both;
+    }
+    
+    .events.out {
+      -webkit-animation: fadeOut .3s ease both;
+      -moz-animation: fadeOut .3s ease both;
+      animation: fadeOut .3s ease both;
+    }
+    
+    .event {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: .5px;
+      padding: 2px 16px;
+      vertical-align: top;
+    }
+    
+    .event.empty {
+      color: #eee;
+    }
+    
+    .event-category {
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      margin: 6px 0 0;
+      vertical-align: top;
+    }
+    
+    .event span {
+      display: inline-block;
+      padding: 0 0 0 7px;
+    }
+    
+    .legend {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background: rgba(60, 60, 60, 1);
+      line-height: 30px;
+    
+    }
+    
+    .entry {
+      position: relative;
+      padding: 0 0 0 25px;
+      font-size: 13px;
+      display: inline-block;
+      line-height: 30px;
+      background: transparent;
+    }
+    
+    .entry:after {
+      position: absolute;
+      content: '';
+      height: 5px;
+      width: 5px;
+      top: 12px;
+      left: 14px;
+    }
+    
+    .entry.blue:after { background: rgba(156, 202, 235, 1); }
+    .entry.orange:after { background: rgba(247, 167, 0, 1); }
+    .entry.green:after { background: rgba(153, 198, 109, 1); }
+    .entry.yellow:after { background: rgba(249, 233, 0, 1); }
+    
+    /* Animations are cool!  */
+    /* @-webkit-keyframes moveFromTopFade {
+      from { opacity: .3; height:0px; margin-top:0px; -webkit-transform: translateY(-100%); }
+    }
+    @-moz-keyframes moveFromTopFade {
+      from { height:0px; margin-top:0px; -moz-transform: translateY(-100%); }
+    }
+    @keyframes moveFromTopFade {
+      from { height:0px; margin-top:0px; transform: translateY(-100%); }
+    }
+    
+    @-webkit-keyframes moveToTopFade {
+      to { opacity: .3; height:0px; margin-top:0px; opacity: 0.3; -webkit-transform: translateY(-100%); }
+    }
+    @-moz-keyframes moveToTopFade {
+      to { height:0px; -moz-transform: translateY(-100%); }
+    }
+    @keyframes moveToTopFade {
+      to { height:0px; transform: translateY(-100%); }
+    }
+    
+    @-webkit-keyframes moveToTopFadeMonth {
+      to { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
+    }
+    @-moz-keyframes moveToTopFadeMonth {
+      to { opacity: 0; -moz-transform: translateY(-30%); }
+    }
+    @keyframes moveToTopFadeMonth {
+      to { opacity: 0; -moz-transform: translateY(-30%); }
+    }
+    
+    @-webkit-keyframes moveFromTopFadeMonth {
+      from { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
+    }
+    @-moz-keyframes moveFromTopFadeMonth {
+      from { opacity: 0; -moz-transform: translateY(30%); }
+    }
+    @keyframes moveFromTopFadeMonth {
+      from { opacity: 0; -moz-transform: translateY(30%); }
+    }
+    
+    @-webkit-keyframes moveToBottomFadeMonth {
+      to { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
+    }
+    @-moz-keyframes moveToBottomFadeMonth {
+      to { opacity: 0; -webkit-transform: translateY(30%); }
+    }
+    @keyframes moveToBottomFadeMonth {
+      to { opacity: 0; -webkit-transform: translateY(30%); }
+    }
+    
+    @-webkit-keyframes moveFromBottomFadeMonth {
+      from { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
+    }
+    @-moz-keyframes moveFromBottomFadeMonth {
+      from { opacity: 0; -webkit-transform: translateY(-30%); }
+    }
+    @keyframes moveFromBottomFadeMonth {
+      from { opacity: 0; -webkit-transform: translateY(-30%); }
+    }
+    
+    @-webkit-keyframes fadeIn  {
+      from { opacity: 0; }
+    }
+    @-moz-keyframes fadeIn  {
+      from { opacity: 0; }
+    }
+    @keyframes fadeIn  {
+      from { opacity: 0; }
+    }
+    
+    @-webkit-keyframes fadeOut  {
+      to { opacity: 0; }
+    }
+    @-moz-keyframes fadeOut  {
+      to { opacity: 0; }
+    }
+    @keyframes fadeOut  {
+      to { opacity: 0; }
+    }
+    
+    @-webkit-keyframes fadeOutShink  {
+      to { opacity: 0; padding: 0px; height: 0px; }
+    }
+    @-moz-keyframes fadeOutShink  {
+      to { opacity: 0; padding: 0px; height: 0px; }
+    }
+    @keyframes fadeOutShink  {
+      to { opacity: 0; padding: 0px; height: 0px; }
+    } */
+    
+
+
+
+ 

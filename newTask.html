@@ -21,65 +21,94 @@
     
 </head>
 
-<body>
-    <h3>Add Task</h3>
-<br>
-    <!-- container for the new task form -->
-    <div class="container" id="taskContainer">
-        <!-- new task form is displayed on a card -->
-        <div class="card" id="newTaskCard">
-            <form>
-                <div class="row">
-                    <div class="twelve columns">
-                        <label for="taskName" id="formLabel">Task Name</label>
-                        <input  class="u-full-width" type="text" placeholder="Email Karen" id="taskName">
-                    </div>
-                </div>
+<body class="bodyNav">
+    <main>
+        <aside>
+          <ul class="asideList">
+            <li><a href="newTask.html" class="asideAnchor">New Task</a></li>
+            <li><a href="overview.html" class="asideAnchor">Overview</a></li>
+            <li><a href="" class="asideAnchor">Task History</a></li>
+            <li><a href="index.html" class="asideAnchor">Logout</a></li>
+          </ul>
+        </aside>
+        <section>
+          <input type="checkbox" id="myInput">
+          <label  id="menuLabels" for="myInput">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+          </label>
+          
+      
+            <div class="content">
+                <h3>Add Task</h3>
                 <br>
-                
-                <div class="row">
-                    <div class="twelve columns">
-                        <label for="moreDetailsArea" id="formLabel">More Details</label>
-                        <textarea class="u-full-width" placeholder="Email Karen about..." id="moreDetailsArea"></textarea>
+                <!-- container for the new task form -->
+                <div class="container" id="taskContainer">
+                    <!-- new task form is displayed on a card -->
+                    <div class="card" id="newTaskCard">
+                        <form>
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <label for="taskName" id="formLabel">Task Name</label>
+                                    <input  class="u-full-width" type="text" placeholder="Email Karen" id="taskName">
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <label for="moreDetailsArea" id="formLabel">More Details</label>
+                                    <textarea class="u-full-width" placeholder="Email Karen about..." id="moreDetailsArea"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <label for="taskOrEvent" id="formLabel">Task or Event?</label>
+                            <div class="row">
+                                <div class="two columns">
+                                    <label for="task" id="tOrELabel">task</label>
+                                </div>
+                                <div class="one column">
+                                    <input class="u-full-width" type="radio" id="task" name="taskOrEvent" value="task">
+                                </div>
+                            </div>
+                                
+                            <div class="row">
+                                <div class="two columns">
+                                    <label for="event" id="tOrELabel">event</label>
+                                </div>
+                                <div class="one column">
+                                    <input  class="u-full-width" type="radio" id="event" name="taskOrEvent" value="event">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <label for="deadline" id="formLabel">Event date or Task deadline</label>
+                                    <input class="u-full-width" type="datetime-local" placeholder="  dd/mm/yy  00:00 " id="deadline" name="deadline">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <label for="" id="durationLabel">Estimated Duration</label>
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <input href="overview.html" class="button" type="submit" value="Submit" id="submitButton">
+                        </form>
                     </div>
                 </div>
-                <br>
-                <label for="taskOrEvent" id="formLabel">Task or Event?</label>
-                 <div class="row">
-                    <div class="two columns">
-                        <label for="task" id="tOrELabel">task</label>
-                    </div>
-                    <div class="one column">
-                        <input class="u-full-width" type="radio" id="task" name="taskOrEvent" value="task">
-                    </div>
-                 </div>
-                    
-                <div class="row">
-                    <div class="two columns">
-                        <label for="event" id="tOrELabel">event</label>
-                    </div>
-                    <div class="one column">
-                        <input  class="u-full-width" type="radio" id="event" name="taskOrEvent" value="event">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="twelve columns">
-                        <label for="deadline" id="formLabel">Event date or Task deadline</label>
-                        <input class="u-full-width" type="datetime-local" placeholder="  dd/mm/yy  00:00 " id="deadline" name="deadline">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="twelve columns">
-                        <label for="" id="durationLabel">Estimated Duration</label>
-                        
-                    </div>
-                </div>
-                <br>
-                <input href="overview.html" class="button" type="submit" value="Submit" id="submitButton">
-            </form>
-        </div>
-    </div>
-</body>
 
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="/js/script.js"></script>
+</body>
 </html>
