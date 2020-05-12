@@ -16,17 +16,17 @@
     
 
     <!-- Style sheet -->
-    <title>inTime - nav</title>
+    <title>inTime - overview</title>
     <link rel="stylesheet" href="css/styles.css"/>
     
 </head>
-<body class="bodyNav">
+<body class="bodyNav bodyCalender" >
     <main>
         <aside>
           <ul class="asideList">
             <li><a href="newTask.html" class="asideAnchor">New Task</a></li>
             <li><a href="overview.html" class="asideAnchor">Overview</a></li>
-            <li><a href="" class="asideAnchor">Task History</a></li>
+            <li><a href="taskHistory.html" class="asideAnchor">Task History</a></li>
             <li><a href="index.html" class="asideAnchor">Logout</a></li>
           </ul>
         </aside>
@@ -42,89 +42,28 @@
             <div class="content">
                 <h3>Overview</h3>
                 <div class="row">
-                    <div class="four columns">
+                    <div class="five columns">
                         <div class="card" id="toDoCard">
                             <div class="container">
                                 <p class="toDoTitle">ToDo List<p>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
+                                <p id="demo"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="eight columns">
-                        <div class="card" id="monthCard">
-                            <div class="month">      
-                            <ul>
-                                <li class="prev">&#10094;</li>
-                                <li class="next">&#10095;</li>
-                                <li>
-                                August<br>
-                                <span style="font-size:18px">2020</span>
-                                </li>
-                            </ul>
+                    <div class="seven columns">
+                        <!-- <div class="bodyCalender"> -->
+                            <div class="card" id="monthCard">
+                                <!-- <div class="month">       -->
+                                    <div id="calendar"></div>
+                                <!-- </div> -->
                             </div>
-                            
-                            <ul class="weekdays">
-                            <li>Mo</li>
-                            <li>Tu</li>
-                            <li>We</li>
-                            <li>Th</li>
-                            <li>Fr</li>
-                            <li>Sa</li>
-                            <li>Su</li>
-                            </ul>
-                            
-                            <ul class="days">  
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li>10</li>
-                            <li>11</li>
-                            <li>12</li>
-                            <li>13</li>
-                            <li>14</li>
-                            <li>15</li>
-                            <li>16</li>
-                            <li>17</li>
-                            <li>18</li>
-                            <li>19</li>
-                            <li>20</li>
-                            <li>21</li>
-                            <li>22</li>
-                            <li>23</li>
-                            <li>24</li>
-                            <li>25</li>
-                            <li>26</li>
-                            <li>27</li>
-                            <li>28</li>
-                            <li>29</li>
-                            <li>30</li>
-                            <li>31</li>
-                            </ul>
-                            
-                        </div>
+                        <!-- </div> -->
                     </div> 
                 </div>
             </div>
         </section>
     </main>
-      
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

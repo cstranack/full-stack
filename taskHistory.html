@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
+    
+
+    <!-- Style sheet -->
+    <title>inTime - newTask</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    
+</head>
+
+<body class="bodyNav">
+    <main>
+        <aside>
+          <ul class="asideList">
+            <li><a href="newTask.html" class="asideAnchor">New Task</a></li>
+            <li><a href="overview.html" class="asideAnchor">Overview</a></li>
+            <li><a href="taskHistory.html" class="asideAnchor">Task History</a></li>
+            <li><a href="index.html" class="asideAnchor">Logout</a></li>
+          </ul>
+        </aside>
+        <section>
+          <input type="checkbox" id="myInput">
+          <label  id="menuLabels" for="myInput">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+          </label>
+          
+      
+            <div class="content">
+                <h3>Add Task</h3>
+                <br>
+                <!-- container for the new task form -->
+                <div class="container" id="taskContainer">
+                    <!-- new task form is displayed on a card -->
+                    <div class="card" id="historyCard">
+                        <table class="u-full-width">
+                            <thead>
+                              <tr>
+                                <th>Task name</th>
+                                <th>Status</th>
+                                <th>Date edited</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Call jenny</td>
+                                <td>Complete</td>
+                                <td>05.05.20</td>
+                              </tr>
+                              <tr>
+                                <td>Send report</td>
+                                <td>Complete</td>
+                                <td>05.07.20</td>
+                              </tr>
+                              <tr>
+                                <td>Check emails</td>
+                                <td>Complete</td>
+                                <td>05.10.20</td>
+                              </tr>
+                              <tr>
+                                <td>Call jenny</td>
+                                <td>To do</td>
+                                <td>05.05.20</td>
+                              </tr>
+                              <tr>
+                                <td>Send report</td>
+                                <td>To do</td>
+                                <td>05.07.20</td>
+                              </tr>
+                              <tr>
+                                <td>Marketing Meeting</td>
+                                <td>Complete</td>
+                                <td>05.30.20</td>
+                              </tr>
+                              <tr>
+                                <td>Check emails</td>
+                                <td>To do</td>
+                                <td>05.10.20</td>
+                              </tr>
+                              <tr>
+                                <td>Marketing Meeting</td>
+                                <td>To do</td>
+                                <td>05.30.20</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
